@@ -90,10 +90,12 @@
 	    margin:0,
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',
-	    nav:false,
-	    autoplayHoverPause: false,
+		mouseDrag:true,
+	    autoplayHoverPause: true,
 	    items: 1,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+		nav:true,
+		autoplayTimeout:2500,
+	    // navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
 	        items:1
