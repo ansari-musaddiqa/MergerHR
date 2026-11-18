@@ -47,6 +47,7 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -11275,7 +11276,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light {
-    background: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 1) !important;
     position: absolute;
     top: 33px;
     left: 0;
@@ -11293,6 +11294,9 @@ h1, h2, h3, h4, h5,
         padding-bottom: 0;
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .contact-info{
+        justify-content: center;
     }
 }
 
@@ -11472,6 +11476,9 @@ h1, h2, h3, h4, h5,
         padding-right: 0 !important;
         padding-bottom: 20px !important;
     }
+    .ftco-navbar-light.scrolled {
+        position: fixed !important;
+    }
 }
 
 .ftco-navbar-light.scrolled .nav-item.active > a {
@@ -11514,7 +11521,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light.scrolled .navbar-toggler {
     border: none;
-    color: rgba(0, 0, 0, 0.5) !important;
+    color: rgba(0, 0, 0) !important;
     border-color: rgba(0, 0, 0, 0.5) !important;
     cursor: pointer;
     text-transform: uppercase;
@@ -11939,7 +11946,7 @@ section.bg-light{
         height: 50px;
         z-index: 1;
         margin-bottom: 20px;
-        background: #ffeeed;
+        background: transparent;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
@@ -13493,6 +13500,11 @@ html{
 .owl-next{
     right:20px;
     left:auto;
+}
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto;
+  touch-action: auto;
 }
 .testimony-wrap{
    height: stretch;

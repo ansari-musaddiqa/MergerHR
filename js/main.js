@@ -88,13 +88,13 @@
 	    loop:true,
 	    autoplay: true,
 	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
+	    // animateOut: 'fadeOut',
+	    // animateIn: 'fadeIn',
 		mouseDrag:true,
 	    autoplayHoverPause: true,
 	    items: 1,
 		nav:true,
-		autoplayTimeout:2500,
+		autoplayTimeout:3000,
 	    // navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
@@ -152,13 +152,14 @@
 		});
 		$('.carousel-testimony').owlCarousel({
 			autoplay: true,
-			center: true,
+			// center: true,
 			loop: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
 			nav: false,
 			dots: true,
+			mouseDrag:true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{
@@ -167,7 +168,7 @@
 				600:{
 					items: 2
 				},
-				1000:{
+				900:{
 					items: 3
 				}
 			}
@@ -342,3 +343,9 @@
 
 })(jQuery);
 
+$(window).on('scroll', function () {
+  // Check if the mobile navbar menu is currently open
+  if ($('.navbar-collapse').hasClass('show')) {
+    $('.navbar-collapse').collapse('hide');
+  }
+});
